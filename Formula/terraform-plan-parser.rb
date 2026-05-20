@@ -17,8 +17,17 @@ class TerraformPlanParser < Formula
     end
   end
 
+  on_windows do
+    url "https://github.com/billybox1926-jpg/terraform-plan-parser/releases/download/v0.1.0/terraform_plan_parser-windows-x64.zip"
+    sha256 "86b71ec7db3c6464cdd6f2ee2d9942c81dfc7237da2b6fa7e831b387e3a159da"
+  end
+
   def install
-    bin.install "terraform_plan_parser"
+    if OS.windows?
+      bin.install "terraform_plan_parser.exe" => "terraform_plan_parser"
+    else
+      bin.install "terraform_plan_parser"
+    end
   end
 
   test do
