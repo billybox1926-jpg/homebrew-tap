@@ -4,14 +4,20 @@ class TerraformPlanParser < Formula
   version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.intel?
+    if Hardware::CPU.arm?
+      url "https://github.com/billybox1926-jpg/terraform-plan-parser/releases/download/v0.1.0/terraform_plan_parser-macos-arm64.tar.gz"
+      sha256 "UPDATE_WITH_ACTUAL_SHA256"
+    else
       url "https://github.com/billybox1926-jpg/terraform-plan-parser/releases/download/v0.1.0/terraform_plan_parser-macos-x64.tar.gz"
       sha256 "e4e429677d41d69db1b644a5cf5fc2238aa98305c7b65ef498f2ebcac8ed6376"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
+    if Hardware::CPU.arm?
+      url "https://github.com/billybox1926-jpg/terraform-plan-parser/releases/download/v0.1.0/terraform_plan_parser-linux-arm64.tar.gz"
+      sha256 "UPDATE_WITH_ACTUAL_SHA256"
+    else
       url "https://github.com/billybox1926-jpg/terraform-plan-parser/releases/download/v0.1.0/terraform_plan_parser-linux-x64.tar.gz"
       sha256 "904554101fd540fdecb5d41e37a8a49b61fad62b5b93675578d88af2293e30d0"
     end
