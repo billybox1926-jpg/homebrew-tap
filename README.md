@@ -74,9 +74,11 @@ Likely next candidates:
 - `mdguard`
 - `terraform-plan-parser`
 
-## Formula requirements
+## Formula policy
 
-Formulae should only be added when the upstream project has:
+Formula inclusion and platform support rules are documented in [FORMULA_POLICY.md](FORMULA_POLICY.md).
+
+In short, formulae should only be added when the upstream project has:
 
 - a tagged release
 - a stable downloadable source archive or binary artifact
