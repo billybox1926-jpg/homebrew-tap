@@ -4,6 +4,11 @@ This document defines when a command-line tool is allowed into this Homebrew tap
 
 The goal is simple: every formula in this tap should be release-backed, checksum-verified, testable, and honest about where it is expected to work.
 
+## Related docs
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — proposing formulae, submitting bumps, and running tap checks
+- [SECURITY.md](SECURITY.md) — reporting checksum, URL, and supply-chain concerns
+
 ## Formula states
 
 ### Candidate
