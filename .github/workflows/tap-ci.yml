@@ -10,7 +10,7 @@ jobs:
   test_formula:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: brew tap billybox1926-jpg/tap .
       - run: brew audit --strict billybox1926-jpg/tap/cargo-feature-lens
       - run: brew install billybox1926-jpg/tap/cargo-feature-lens
