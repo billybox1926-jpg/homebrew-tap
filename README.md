@@ -48,6 +48,25 @@ If Cargo installs the executable successfully, the tool is ready to use from Pow
 
 - `cargo-feature-lens` — audit and visualize Cargo dependency feature footprints
 
+## Terraform Plan Parser
+
+[`terraform-plan-parser`](https://github.com/billybox1926-jpg/terraform-plan-parser) is planned for this tap once its Homebrew formula is release-ready.
+
+Expected install command after the formula is added:
+
+```bash
+brew tap billybox1926-jpg/tap
+brew install terraform-plan-parser
+```
+
+Direct install form after the formula is added:
+
+```bash
+brew install billybox1926-jpg/tap/terraform-plan-parser
+```
+
+The formula should not be added until the upstream release URL and `sha256` are verified.
+
 ## Planned formulae
 
 Likely next candidates:
@@ -85,7 +104,7 @@ For each new formula:
 1. Confirm the upstream GitHub release tag.
 2. Confirm the artifact URL.
 3. Calculate the artifact SHA256.
-4. Add the formula under `Formula/`.
+4. Add or update the formula under `Formula/`.
 5. Run local Homebrew validation:
 
 ```bash
@@ -94,6 +113,20 @@ brew test billybox1926-jpg/tap/<formula-name>
 ```
 
 When local Homebrew is unavailable, rely on the repository's GitHub Actions tap check.
+
+## Update process
+
+Formula updates are currently manual and release-driven.
+
+For each version bump:
+
+1. Wait for the upstream project to publish a tagged release.
+2. Download the exact source archive or release artifact that Homebrew will use.
+3. Calculate the new `sha256`.
+4. Update the formula `url`, `sha256`, and any test details if needed.
+5. Let Tap CI run on GitHub Actions.
+
+Automated bumps can be added later if the tap grows, but manual updates are safer while the formula set is small.
 
 ## Notes
 
