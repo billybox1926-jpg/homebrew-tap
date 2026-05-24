@@ -1,8 +1,10 @@
 # Billy Box Homebrew Tap
 
+**Status:** stable-maintenance
+
 Homebrew tap for Billy Box command-line tools.
 
-This repository is the public Homebrew distribution point for selected open-source CLI releases from `billybox1926-jpg`.
+This repository is the public Homebrew distribution point for selected open-source CLI releases from `billybox1926-jpg`. Changes are release-driven: formulae are added or bumped when upstream releases are tagged, checksums are verified, and tests are available.
 
 ## Install with Homebrew
 
@@ -55,13 +57,11 @@ Likely next candidates:
 
 - `mdguard`
 
-## Contributing and formula policy
+## Project docs
 
-Contribution guidance is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Formula inclusion and platform support rules are documented in [FORMULA_POLICY.md](FORMULA_POLICY.md).
-
-Security policy and reporting guidance are documented in [SECURITY.md](SECURITY.md).
+- [CONTRIBUTING.md](CONTRIBUTING.md) — proposing formulae, submitting bumps, and running tap checks
+- [FORMULA_POLICY.md](FORMULA_POLICY.md) — formula inclusion, platform support, and release requirements
+- [SECURITY.md](SECURITY.md) — reporting checksum, URL, and supply-chain concerns
 
 In short, formulae should only be added when the upstream project has:
 
