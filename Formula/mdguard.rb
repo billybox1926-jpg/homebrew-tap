@@ -8,11 +8,12 @@ class Mdguard < Formula
   depends_on "python@3.12"
 
   def install
-    system "python3", "-m", "pip", "install",
-           "--prefix=#{libexec}",
-           "--no-deps", "--no-compile",
-           "."
-    bin.install libexec/"bin/mdguard"
+    pkgshare.install "src/mdguard"
+    (bin/"mdguard").write <<~SHELL
+      #!/bin/bash
+      export PYTHONPATH="#{pkgshare}"
+      exec python3 -m mdguard.cli "$@"
+    SHELL
   end
 
   test do
