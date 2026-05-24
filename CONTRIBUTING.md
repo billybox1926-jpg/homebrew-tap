@@ -16,15 +16,58 @@ The short version:
 - document platform support honestly
 - avoid placeholder formulae with guessed metadata
 
-## Typical formula workflow
+## Propose a new formula
+
+Before proposing a new formula, confirm that the upstream project has:
+
+- a public repository or project homepage
+- a tagged release
+- a stable source archive or release artifact URL
+- a license suitable for redistribution
+- a command that can be used in a safe Homebrew `test do` block
+
+Open an issue with:
+
+- the upstream repository URL
+- the release tag
+- the planned formula name
+- the target platforms
+- any known install or runtime limitations
+
+Do not add placeholder formulae with guessed URLs, guessed checksums, or unreleased metadata.
+
+## Submit a version bump
+
+For a formula bump:
 
 1. Confirm the upstream release tag.
 2. Confirm the source archive or artifact URL.
-3. Download the exact artifact.
+3. Download the exact artifact Homebrew will fetch.
 4. Calculate the `sha256`.
-5. Update or add the formula under `Formula/`.
-6. Run Homebrew validation locally when possible.
-7. Let GitHub Actions run the tap check.
+5. Update the formula under `Formula/`.
+6. Update the test block if the CLI behavior changed.
+7. Run Homebrew validation locally when possible.
+8. Let GitHub Actions run the tap check.
+
+## Run the tap check locally
+
+From a machine with Homebrew installed:
+
+```bash
+brew tap billybox1926-jpg/tap /path/to/homebrew-tap
+brew audit --strict --online billybox1926-jpg/tap/<formula-name>
+brew install --build-from-source billybox1926-jpg/tap/<formula-name>
+brew test billybox1926-jpg/tap/<formula-name>
+```
+
+For example:
+
+```bash
+brew audit --strict --online billybox1926-jpg/tap/cargo-feature-lens
+brew test billybox1926-jpg/tap/cargo-feature-lens
+```
+
+If local Homebrew is unavailable, use the repository's GitHub Actions tap check.
 
 ## Windows note
 
