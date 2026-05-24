@@ -4,6 +4,11 @@ Thanks for helping keep this tap tidy and useful.
 
 This repository is intentionally conservative: formulae should be release-backed, checksum-verified, and easy to test.
 
+## Related docs
+
+- [FORMULA_POLICY.md](FORMULA_POLICY.md) — formula inclusion, platform support, and release requirements
+- [SECURITY.md](SECURITY.md) — reporting checksum, URL, and supply-chain concerns
+
 ## Formula policy
 
 Before adding or updating a formula, read [FORMULA_POLICY.md](FORMULA_POLICY.md).
