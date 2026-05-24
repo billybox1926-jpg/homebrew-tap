@@ -4,15 +4,15 @@ Homebrew tap for Billy Box command-line tools.
 
 This repository is the public Homebrew distribution point for selected open-source CLI releases from `billybox1926-jpg`.
 
-## Install
+## Install with Homebrew
 
-Once a formula is available, install tools with:
+Install a formula directly from this tap:
 
 ```bash
 brew install billybox1926-jpg/tap/<formula-name>
 ```
 
-For example, after `cargo-feature-lens` is added:
+For example:
 
 ```bash
 brew install billybox1926-jpg/tap/cargo-feature-lens
@@ -22,12 +22,40 @@ You can also tap the repository first:
 
 ```bash
 brew tap billybox1926-jpg/tap
-brew install <formula-name>
+brew install cargo-feature-lens
 ```
 
-## Current status
+## Windows and Rust install
 
-This tap has been initialized and is ready for formula additions.
+Homebrew is usually used from macOS or Linux-style shell environments. If you are on Windows PowerShell and see an error like this:
+
+```text
+brew : The term 'brew' is not recognized
+```
+
+that means Homebrew is not installed or is not available on your `PATH` in that shell.
+
+For Rust-based tools, the simplest Windows path is usually Cargo:
+
+```powershell
+cargo install cargo-feature-lens
+cargo-feature-lens --help
+```
+
+If Cargo installs the executable successfully, the tool is ready to use from PowerShell as long as Cargo's bin directory is on your `PATH`.
+
+## Available formulae
+
+- `cargo-feature-lens` — audit and visualize Cargo dependency feature footprints
+
+## Planned formulae
+
+Likely next candidates:
+
+- `mdguard`
+- `terraform-plan-parser`
+
+## Formula requirements
 
 Formulae should only be added when the upstream project has:
 
@@ -35,14 +63,6 @@ Formulae should only be added when the upstream project has:
 - a stable downloadable source archive or binary artifact
 - a verified `sha256`
 - a working install/test block for Homebrew
-
-## Planned formulae
-
-Likely first candidates:
-
-- `cargo-feature-lens`
-- `mdguard`
-- `terraform-plan-parser`
 
 ## Formula layout
 
@@ -72,6 +92,8 @@ For each new formula:
 brew audit --strict --online billybox1926-jpg/tap/<formula-name>
 brew test billybox1926-jpg/tap/<formula-name>
 ```
+
+When local Homebrew is unavailable, rely on the repository's GitHub Actions tap check.
 
 ## Notes
 
