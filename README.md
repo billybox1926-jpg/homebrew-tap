@@ -50,12 +50,11 @@ If Cargo installs the executable successfully, the tool is ready to use from Pow
 
 - `cargo-feature-lens` — audit and visualize Cargo dependency feature footprints
 - `terraform-plan-parser` — turn Terraform plan JSON into clean human-readable summaries
+- `mdguard` — tiny, dependency-free Markdown lint guardrails
 
 ## Planned formulae
 
-Likely next candidates:
-
-- `mdguard`
+_None yet. New tool suggestions are welcome via issues._
 
 ## Project docs
 
