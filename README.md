@@ -47,38 +47,21 @@ If Cargo installs the executable successfully, the tool is ready to use from Pow
 ## Available formulae
 
 - `cargo-feature-lens` — audit and visualize Cargo dependency feature footprints
-
-## Terraform Plan Parser
-
-[`terraform-plan-parser`](https://github.com/billybox1926-jpg/terraform-plan-parser) is planned for this tap once its Homebrew formula is release-ready.
-
-Expected install command after the formula is added:
-
-```bash
-brew tap billybox1926-jpg/tap
-brew install terraform-plan-parser
-```
-
-Direct install form after the formula is added:
-
-```bash
-brew install billybox1926-jpg/tap/terraform-plan-parser
-```
-
-The formula should not be added until the upstream release URL and `sha256` are verified.
+- `terraform-plan-parser` — turn Terraform plan JSON into clean human-readable summaries
 
 ## Planned formulae
 
 Likely next candidates:
 
 - `mdguard`
-- `terraform-plan-parser`
 
 ## Contributing and formula policy
 
 Contribution guidance is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Formula inclusion and platform support rules are documented in [FORMULA_POLICY.md](FORMULA_POLICY.md).
+
+Security policy and reporting guidance are documented in [SECURITY.md](SECURITY.md).
 
 In short, formulae should only be added when the upstream project has:
 
