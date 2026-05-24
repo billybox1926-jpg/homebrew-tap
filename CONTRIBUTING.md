@@ -13,6 +13,8 @@ This repository is intentionally conservative: formulae should be release-backed
 
 Before adding or updating a formula, read [FORMULA_POLICY.md](FORMULA_POLICY.md).
 
+For security reporting and scope, see [SECURITY.md](SECURITY.md).
+
 The short version:
 
 - use tagged upstream releases
