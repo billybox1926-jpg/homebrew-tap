@@ -74,7 +74,9 @@ Likely next candidates:
 - `mdguard`
 - `terraform-plan-parser`
 
-## Formula policy
+## Contributing and formula policy
+
+Contribution guidance is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Formula inclusion and platform support rules are documented in [FORMULA_POLICY.md](FORMULA_POLICY.md).
 
