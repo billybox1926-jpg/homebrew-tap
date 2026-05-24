@@ -1,5 +1,10 @@
 # Security Policy
 
+## Related docs
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — proposing formulae, submitting bumps, and running tap checks
+- [FORMULA_POLICY.md](FORMULA_POLICY.md) — formula inclusion, platform support, and release requirements
+
 ## Supported Versions
 
 This repository is a Homebrew tap — it distributes formulae that install
