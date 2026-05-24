@@ -1,0 +1,17 @@
+name: Tap CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test_formula:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew tap billybox1926-jpg/tap .
+      - run: brew audit --strict billybox1926-jpg/tap/cargo-feature-lens
+      - run: brew install billybox1926-jpg/tap/cargo-feature-lens
+      - run: brew test billybox1926-jpg/tap/cargo-feature-lens
